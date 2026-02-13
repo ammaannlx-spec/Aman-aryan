@@ -1,300 +1,223 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Aman Aryan</title>  
-    <meta name="google-site-verification" content="J1G4Em_ZNMxxDpSuRMgtspSUnrhAzdKZoUEswPqD214" />  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">  <style>  
-*{  
-    margin:0;  
-    padding:0;  
-    box-sizing:border-box;  
-}  
-  
-html{  
-    scroll-behavior:smooth;  
-}  
-  
-body{  
-    font-family:'Poppins',sans-serif;  
-    background:#0a0a0a;  
-    color:#f5f5f5;  
-    overflow-x:hidden;  
-}  
-  
+<!DOCTYPE html>  <html lang="en">    <head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>Aman Aryan</title>    
+    <meta name="google-site-verification" content="J1G4Em_ZNMxxDpSuRMgtspSUnrhAzdKZoUEswPqD214" />  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">  <style>    
+*{    
+    margin:0;    
+    padding:0;    
+    box-sizing:border-box;    
+}    html{
+scroll-behavior:smooth;
+}
 
-  
-/* Image Front */  
-.hero img{  /* HERO */
+body{
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:#f5f5f5;
+overflow-x:hidden;
+}
+
+/* HERO */
 .hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    text-align:center;
-    overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+text-align:center;
 }
 
-/* Spotlight Glow */
-..hero-text-bg{
-position:absolute;
-font-size:18vw;
-font-weight:800;
-letter-spacing:10px;
-color:transparent;
--webkit-text-stroke:1 px
-rgba(255,255,255,0.08);
-z-index:0;
-user-select:none;
-}
-
-/* Massive Background Name */
+/* Big Background Text */
 .hero-text-bg{
-
 position:absolute;
-
 font-size:18vw;
-
 font-weight:800;
-
 letter-spacing:10px;
-
 color:transparent;
-
--webkit-text-stroke:1 px
-
-rgba(255,255,255,0.08);
-
+-webkit-text-stroke:1px rgba(255,255,255,0.08);
 z-index:0;
-
 user-select:none;
+}
 
-/* Slow Horizontal Drift */
-@keyframes slowMove{
-    from{ transform:translate(-52%, -50%); }
-    to{ transform:translate(-48%, -50%); }
+/* Tagline */
+.tagline{
+position:absolute;
+top:73%;
+font-size:1.1rem;
+letter-spacing:4px;
+font-weight:300;
+opacity:0.7;
+z-index:1;
 }
 
 /* Image Front */
 .hero img{
-    width:400px;
-    max-width:85%;
-    border-radius:14px;
-    position:relative;
-    z-index:2;
-    object-fit:cover;
-    box-shadow:0 30px 80px rgba(0,0,0,0.9);
-    transition:transform 0.3s ease;
+width:380px;
+max-width:85%;
+border-radius:14px;
+position:relative;
+z-index:2;
+object-fit:cover;
+box-shadow:0 25px 60px rgba(0,0,0,0.9);
+animation:float 6s ease-in-out infinite;
+transition:0.4s ease;
 }
 
-/* Tagline Below Image */
+.hero img:hover{
+transform:scale(1.05);
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0px);}
+}
+
+/* SECTIONS */
+section{
+padding:100px 10%;
+max-width:1100px;
+margin:auto;
+}
+
+/* Fade In */
+.fade-in{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+font-size:2rem;
+margin-bottom:30px;
+letter-spacing:2px;
+}
+
+p{
+line-height:1.8;
+opacity:0.85;
+}
+
+/* Cards */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.4s ease;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,255,255,0.1);
+}
+
+/* Social */
+.socials{
+display:flex;
+gap:25px;
+margin-top:20px;
+}
+
+.socials a{
+text-decoration:none;
+color:#f5f5f5;
+opacity:0.7;
+transition:0.3s ease;
+}
+
+.socials a:hover{
+opacity:1;
+text-shadow:0 0 10px rgba(255,255,255,0.8);
+}
+
+/* Contact Button */
+.contact-btn{
+display:inline-block;
+margin-top:40px;
+padding:12px 30px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.5);
+text-decoration:none;
+color:#fff;
+transition:0.3s ease;
+}
+
+.contact-btn:hover{
+background:#fff;
+color:#000;
+box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
+
+/* Footer */
+footer{
+text-align:center;
+padding:40px 0;
+opacity:0.5;
+font-size:0.9rem;
+}
+
+/* Mobile */
+@media(max-width:768px){
+.hero-text-bg{
+font-size:18vw;
+}
 .tagline{
-    margin-top:25px;
-    font-size:1.1rem;
-    letter-spacing:5px;
-    font-weight:300;
-    opacity:0.7;
-    z-index:2;
+font-size:0.9rem;
 }
-    width:380px;  
-    max-width:85%;  
-    border-radius:14px;  
-    position:relative;  
-    z-index:2;  
-    object-fit:cover;  
-    box-shadow:0 25px 60px rgba(0,0,0,0.9);  
-   /* animation:float 6s ease-in-out infinite;  */
-    transition:0.4s ease;  
-}  
-  
-.hero img:hover{  
-    transform:scale(1.05);  
-}  
-  
-@keyframes float{  
-    0%{transform:translateY(0px);}  
-    50%{transform:translateY(-18px);}  
-    100%{transform:translateY(0px);}  
-}  
-  
-/* SECTIONS */  
-section{  
-    padding:100px 10%;  
-    max-width:1100px;  
-    margin:auto;  
-}  
-  
-/* Fade In */  
-.fade-in{  
-    opacity:0;  
-    transform:translateY(40px);  
-    transition:1s ease;  
-}  
-  
-.fade-in.visible{  
-    opacity:1;  
-    transform:translateY(0);  
-}  
-  
-h2{  
-    font-size:2rem;  
-    margin-bottom:30px;  
-    letter-spacing:2px;  
-}  
-  
-p{  
-    line-height:1.8;  
-    opacity:0.85;  
-}  
-  
-/* Cards */  
-.cards{  
-    display:grid;  
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  
-    gap:30px;  
-}  
-  
-.card{  
-    background:#111;  
-    padding:30px;  
-    border-radius:14px;  
-    border:1px solid rgba(255,255,255,0.05);  
-    transition:0.4s ease;  
-}  
-  
-.card:hover{  
-    transform:translateY(-10px);  
-    box-shadow:0 0 25px rgba(255,255,255,0.1);  
-}  
-  
-/* Social */  
-.socials{  
-    display:flex;  
-    gap:25px;  
-    margin-top:20px;  
-}  
-  
-.socials a{  
-    text-decoration:none;  
-    color:#f5f5f5;  
-    opacity:0.7;  
-    transition:0.3s ease;  
-}  
-  
-.socials a:hover{  
-    opacity:1;  
-    text-shadow:0 0 10px rgba(255,255,255,0.8);  
-}  
-  
-/* Contact Button */  
-.contact-btn{  
-    display:inline-block;  
-    margin-top:40px;  
-    padding:12px 30px;  
-    border-radius:30px;  
-    border:1px solid rgba(255,255,255,0.5);  
-    text-decoration:none;  
-    color:#fff;  
-    transition:0.3s ease;  
-}  
-  
-.contact-btn:hover{  
-    background:#fff;  
-    color:#000;  
-    box-shadow:0 0 25px rgba(255,255,255,0.6);  
-}  
-  
-/* Footer */  
-footer{  
-    text-align:center;  
-    padding:40px 0;  
-    opacity:0.5;  
-    font-size:0.9rem;  
-}  
-  
-/* Mobile */  
-@media(max-width:768px){  
-    .hero-text-bg{  
-        font-size:18vw;  
-    }  
-    .tagline{  
-        font-size:0.9rem;  
-    }  
-}  
-</style>  </head>  <body>  <div class="hero">  
-    <div class="hero-text-bg">AMAN ARYAN</div>  
-    <img src="aman.png" alt="Aman Aryan">  
-    <div class="tagline">Gamer. Creator. Evolving.</div>  
-</div>  <section class="fade-in">  
-    <h2>About</h2>  
-    <p>  
-        Hey, I’m Aman Aryan. I enjoy playing games and interacting with people who share similar interests.  
-        This website is my personal space where I’ll share updates and things I’m working on.  
-        More updates coming soon.  
-     Every buttons below is empty 😁 except the contact button.  
-    </p>  
-</section>  <section class="fade-in">  
-    <h2>What I Do</h2>  
-    <div class="cards">  
-        <div class="card">🎮 Gaming</div>  
-        <div class="card">🎥 Content Creation</div>  
-        <div class="card">🌍 Community Interaction</div>  
-    </div>  
-</section>  <section class="fade-in">  
-    <h2>Connect</h2>  
-    <div class="socials">  
-        <a href="#">YouTube</a>  
-        <a href="#">Instagram</a>  
-        <a href="#">Discord</a>  
-    </div>  <a href="mailto:amanaryn48@gmail.com" class="contact-btn">Contact Me</a>
+}
+</style>  </head>  <body>  <div class="hero">
+<div class="hero-text-bg">AMAN ARYAN</div>
+<img src="aman.png" alt="Aman Aryan">
+<div class="tagline">Gamer. Creator. Evolving.</div>
 
-</section>  <footer>  
-    © 2026 Aman Aryan. All rights reserved.  
-</footer>  <script>  
-/*const faders=document.querySelectorAll('.fade-in');  
-  
-const observer=new IntersectionObserver(entries=>{  
-    entries.forEach(entry=>{  
-        if(!entry.isIntersecting)return;  
-        entry.target.classList.add('visible');  
-        observer.unobserve(entry.target);  
-    });  
-},{threshold:0.2});  
-  
-faders.forEach(fader=>{  
-    observer.observe(fader);  
-});*/
-
-const faders=document.querySelectorAll('.fade-in');
-
-const observer=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(!entry.isIntersecting)return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-    });
+</div>  <section class="fade-in">    
+    <h2>About</h2>    
+    <p>    
+        Hey, I’m Aman Aryan. I enjoy playing games and interacting with people who share similar interests.    
+        This website is my personal space where I’ll share updates and things I’m working on.    
+        More updates coming soon.    
+     Every buttons below is empty 😁 except the contact button.    
+    </p>    
+</section>  <section class="fade-in">    
+    <h2>What I Do</h2>    
+    <div class="cards">    
+        <div class="card">🎮 Gaming</div>    
+        <div class="card">🎥 Content Creation</div>    
+        <div class="card">🌍 Community Interaction</div>    
+    </div>    
+</section>  <section class="fade-in">    
+    <h2>Connect</h2>    
+    <div class="socials">    
+        <a href="#">YouTube</a>    
+        <a href="#">Instagram</a>    
+        <a href="#">Discord</a>    
+    </div>  <a href="mailto:amanaryn48@gmail.com" class="contact-btn">Contact Me</a>  </section>  <footer>    
+    © 2026 Aman Aryan. All rights reserved.    
+</footer>  <script>    
+const faders=document.querySelectorAll('.fade-in');    const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting)return;
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+});
 },{threshold:0.2});
 
 faders.forEach(fader=>{
-    observer.observe(fader);
+observer.observe(fader);
 });
+</script>  </body>
 
-
-// 🔥 ADD THIS BELOW
-const heroImage = document.querySelector(".hero img");
-
-document.addEventListener("mousemove", (e) => {
-
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-
-    const moveX = (e.clientX - centerX) / 40;
-    const moveY = (e.clientY - centerY) / 40;
-
-    heroImage.style.transform = `translate(${moveX}px, ${moveY}px)`;
-
-});
-</script>
-</script>  </body>  
-</html>  
+</html>    Write so that aman aryan title is so big it's comming from the sides of the photo and that tagline should be below the photos
