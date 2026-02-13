@@ -29,7 +29,7 @@ text-align:center;
 }
 
 /* Big Background Text */
-.hero-text-bg{
+/*.hero-text-bg{
 position:absolute;
 font-size:300vw;
 font-weight:800;
@@ -38,7 +38,22 @@ color:transparent;
 -webkit-text-stroke:1px rgba(255,255,255,0.08);
 z-index:0;
 user-select:none;
-}
+}*/
+        .hero-text-bg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:28vw;
+    font-weight:800;
+    letter-spacing:20px;
+    white-space:nowrap;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,0.08);
+    z-index:0;
+    animation:slowMove 20s linear infinite alternate;
+        }
+        
 
 /* Tagline */
 .tagline{
