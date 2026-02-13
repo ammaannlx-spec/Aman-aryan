@@ -22,14 +22,18 @@ body{
 }  
   
 /* HERO */  
-.hero{  
-    height:100vh;  
-    display:flex;  
-    justify-content:center;  
-    align-items:center;  
-    position:relative;  
-    text-align:center;  
-}  
+..hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;   /* Stack vertically */
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    text-align:center;
+}
+        .hero-text-bg{
+    text-shadow:0 0 40px rgba(255,255,255,0.05);
+        }
   
 /* Big Background Text */  
 ..hero-text-bg{
