@@ -32,27 +32,29 @@ body{
 }  
   
 /* Big Background Text */  
-.hero-text-bg{  
-    position:absolute;  
-    font-size:18vw;  
-    font-weight:800;  
-    letter-spacing:10px;  
-    color:transparent;  
-    -webkit-text-stroke:1px rgba(255,255,255,0.08);  
-    z-index:0;  
-    user-select:none;  
-}  
+..hero-text-bg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:25vw;   /* VERY BIG */
+    font-weight:800;
+    letter-spacing:20px;
+    white-space:nowrap;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,0.08);
+    z-index:0;
+    user-select:none;
+}
   
 /* Tagline */  
-.tagline{  
-    position:absolute;  
-    top:73%;  
-    font-size:1.1rem;  
-    letter-spacing:4px;  
-    font-weight:300;  
-    opacity:0.7;  
-    z-index:1;  
-}  
+.tagline{
+    margin-top:25px;
+    font-size:1.1rem;
+    letter-spacing:4px;
+    font-weight:300;
+    opacity:0.7;
+}
   
 /* Image Front */  
 .hero img{  
